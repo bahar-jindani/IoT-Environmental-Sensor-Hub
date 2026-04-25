@@ -2,7 +2,14 @@
 
 ESP32-based environmental monitor that streams **temperature, humidity, atmospheric pressure, and altitude** over Wi-Fi to an MQTT broker. Each value is published on its own topic so any MQTT panel app can subscribe directly — no JSON parsing needed.
 
-![Circuit](docs/circuit.png)
+<p align="center">
+  <img src="docs/circuit.png"   alt="Circuit"   height="380">
+  &nbsp;&nbsp;&nbsp;
+  <img src="docs/panel_app.jpeg" alt="Panel app" height="380">
+</p>
+
+> **Left:** wiring diagram (ESP32 + DHT22 + BMP280).
+> **Right:** custom Android MQTT panel app subscribing to the topics this firmware publishes — gauges for temperature, humidity, pressure, altitude.
 
 ---
 
