@@ -1,0 +1,28 @@
+# Arduino IDE
+*.elf
+*.bin
+*.hex
+*.eep
+build/
+*.orig
+*.bak
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/
+.clang_complete
+.gcc-flags.json
+
+# Python (Wokwi MicroPython sims occasionally generate these)
+__pycache__/
+*.pyc
+*.pyo
+
+# Editors / OS
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

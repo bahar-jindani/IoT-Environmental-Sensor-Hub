@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -38.4, "left": -91.16, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -18.9, "left": 177, "attrs": {} },
+    {
+      "type": "chip-bmp280",
+      "id": "chip1",
+      "top": -199.4,
+      "left": 5.82,
+      "rotate": 270,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v109.3", "h-297.6", "v-214.9" ] ],
+    [ "dht1:SDA", "esp:15", "green", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v96", "h-189.56", "h-127.24", "v-76.8" ] ],
+    [ "chip1:GND", "esp:GND.2", "black", [ "v19.2", "h76.8", "v77.62" ] ],
+    [ "chip1:VCC", "esp:3V3", "red", [ "v9.6", "h-144", "v96" ] ],
+    [ "chip1:SCK", "esp:18", "green", [ "v38.4", "h57.6", "v135.22" ] ],
+    [ "chip1:SDI", "esp:19", "green", [ "v48", "h67.2", "v116.02" ] ],
+    [ "chip1:SDO", "esp:23", "green", [ "h57.6", "v105.6" ] ],
+    [ "chip1:CS", "esp:5", "green", [ "v9.6", "h76.8", "v172.8" ] ]
+  ],
+  "dependencies": {}
+}
