@@ -30,7 +30,7 @@ ESP32-based environmental monitor that streams **temperature, humidity, atmosphe
 ├── README.md
 ├── LICENSE
 ├── .gitignore
-├── arduino/IoT_Environmental_Sensor_Hub/
+├── IoT_Environmental_Sensor_Hub/
 │   └── IoT_Environmental_Sensor_Hub.ino   # the only file you need to flash
 ├── platformio/platformio.ini              # optional PlatformIO config
 ├── wokwi/                                 # Wokwi simulator project
@@ -86,12 +86,12 @@ Both sensors run on **3V3**. Full table in [docs/WIRING.md](docs/WIRING.md).
    - **Adafruit BMP280 Library**
    - **ArduinoMqttClient** (Arduino)
 
-3. Open `arduino/IoT_Environmental_Sensor_Hub/IoT_Environmental_Sensor_Hub.ino`.
+3. Open `IoT_Environmental_Sensor_Hub/IoT_Environmental_Sensor_Hub.ino`.
 
 4. Edit the top of the sketch with your Wi-Fi credentials:
    ```cpp
-   const char* WIFI_SSID     = "your-wifi-name";
-   const char* WIFI_PASSWORD = "your-wifi-password";
+   char ssid[] = "your-wifi-name";
+   char pass[] = "your-wifi-password";
    ```
 
 5. `Tools → Board → ESP32 Dev Module`, select port, **Upload**.
